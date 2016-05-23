@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel='stylesheet' type='text/css'>
+    <link href="Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+    <link href="Content/SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" />
+
+    <style>
+        @media screen and (min-width: 768px) {
+            #myModal1 .modal-dialog {width: 75%;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Button trigger modal -->
+    <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Launch FizzBuzz</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">1 - 100 FizzBuzz</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="row col-sm-12"> <!--FizzBuzz description row on modal-->
+                                Write a program that accepts two numbers between 1 and 100 from the user.
+                                The program then iterates through all numbers from 1 to 100,
+                                printing numbers in ascending order to the screen.
+                                For each number that is a multiple of the first number input by the user,
+                                print "Fizz" instead of the number.
+                                For each number that is a multiple of the second number input by the user,
+                                print "Buzz" instead of the number.
+                                For numbers that are multiples of both numbers,
+                                print "FizzBuzz" instead of the number.<p/>
+                            </div>
+                            <div class="row col-sm-12"> <!--results row on modal-->
+                                <p id="result"></p> <!--print out results-->  
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row col-sm-12">
+                                <pre class="brush: js" id="modalscroll">
+                                    function fizzBuzz() {
+                                        var str = "";
+                                        for (i = 1; i <= 100; i++) {
+                                            if ((i % 3 == 0) && (i % 5 == 0)) {
+                                                str += i + " FizzBuzz ";
+                                            } else if ((i % 3 == 0)) {
+                                                str += i + " Fizz ";
+                                            } else if ((i % 5 == 0)) {
+                                                str += i + " Buzz ";
+                                            } else {
+                                                str += i + " ";
+                                            }
+                                        }
+                                        $("#result").html(str);
+                                    }
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="fizzBuzz()" style="float: left;">Get FizzBuzz</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="row">
+        Write a program that accepts two numbers between 1 and 100 from the user.
+        The program then iterates through all numbers from 1 to 100,
+        printing numbers in ascending order to the screen.
+        For each number that is a multiple of the first number input by the user,
+        print "Fizz" instead of the number.
+        For each number that is a multiple of the second number input by the user,
+        print "Buzz" instead of the number.
+        For numbers that are multiples of both numbers,
+        print "FizzBuzz" instead of the number. <p />
+    </div>
+
+    <div class="row">
+
+    </div>
+    </br>
+
+    <div class="row">
+        <button onclick="fizzBuzz()">Get FizzBuzz</button>
+    </div>
+    <br />
+    </p>
+    <div class="row">
+        <p id="result"></p> <!--prints out results-->
+    </div>
+    </div><!--container div end tag-->
+
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script src="scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+
+    <script>
+        function fizzBuzz() {
+            var str = "";
+            for (i = 1; i <= 100; i++) {
+                if ((i % 3 == 0) && (i % 5 == 0)) {
+                    str += i + " FizzBuzz ";
+                } else if ((i % 3 == 0)) {
+                    str += i + " Fizz ";
+                } else if ((i % 5 == 0)) {
+                    str += i + " Buzz ";
+                } else {
+                    str += i + " ";
+                }
+            }
+            $("#result").html(str);
+        }
+
+        $('.modal ').on('show.bs.modal', function () {
+            $('.modal .modal-body').css('overflow-y', 'auto');
+            $('.modal .modal-body').css('max-height', $(window).height() * 0.65);
+            $('#modalscroll').css('overflow-y', 'auto');
+            $('#modalscroll').css('max-height', $(window).height() * 0.5);
+        });
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>

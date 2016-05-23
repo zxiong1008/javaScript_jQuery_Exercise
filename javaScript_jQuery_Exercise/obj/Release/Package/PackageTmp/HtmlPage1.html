@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+    <link href="Content/SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" />
+
+    <style>
+        @media screen and (min-width: 768px) {
+            #myModal1 .modal-dialog  {width: 75%;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Button trigger modal -->
+    <a data-toggle="modal" href="#myModal1" class="btn btn-primary btn-lg">Launch 5 Series</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">5 Series</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-sm-12"> <!--series description row on modal-->
+                                    Write a program that accepts a series of at
+                                    least 5 numbers from the user and performs
+                                    the following actions:<p/>
+                                </div>
+                            </div>
+                            <div class="row col-sm-12"> <!--series list row on modal-->
+                                <ol>
+                                    <ul>1. Determine which number is the least</ul>
+                                    <ul>2. Determine which number is the greatest</ul>
+                                    <ul>3. Determine the mean of the numbers</ul>
+                                    <ul>4. Determine the sum of all the numbers</ul>
+                                    <ul>5. Determine the product of all the numbers</ul>
+                                </ol>
+                            </div>
+                            <div class="row col-sm-12"> <!--series input row on modal-->
+                                <input type="text" id="slot1" class="col-sm-2 well well-sm" value="1">
+                                <input type="text" id="slot2" class="col-sm-2 well well-sm" value="2">
+                                <input type="text" id="slot3" class="col-sm-2 well well-sm" value="3">
+                                <input type="text" id="slot4" class="col-sm-2 well well-sm" value="4">
+                                <input type="text" id="slot5" class="col-sm-2 well well-sm" value="5">
+                            </div>
+                            <div class="row col-sm-12">
+                                <p id="result"></p> <!--prints out results-->
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row col-sm-12">
+                                <pre class="brush: js" id="modalscroll">
+                                    function GetMax() {
+                                        var num = Math.max( parseInt($("#slot1").val()),
+                                                            parseInt($("#slot2").val()),
+                                                            parseInt($("#slot3").val()),
+                                                            parseInt($("#slot4").val()),
+                                                            parseInt($("#slot5").val()));
+                                        $("#result").html(num + " is the max number.");
+                                    }
+                                    function GetMin() {
+                                        var num = Math.min( parseInt($("#slot1").val()),
+                                                            parseInt($("#slot2").val()),
+                                                            parseInt($("#slot3").val()),
+                                                            parseInt($("#slot4").val()),
+                                                            parseInt($("#slot5").val()));
+                                        $("#result").html(num + " is the max number.");
+                                    }
+                                    function GetMean() {
+                                        var num = ( parseInt($("#slot1").val())+
+                                                    parseInt($("#slot2").val())+
+                                                    parseInt($("#slot3").val())+
+                                                    parseInt($("#slot4").val())+
+                                                    parseInt($("#slot5").val()))/5;
+                                        $("#result").html(num + " is the max number.");
+                                    }
+                                    function GetSum() {
+                                        var num = ( parseInt($("#slot1").val()) +
+                                                    parseInt($("#slot2").val()) +
+                                                    parseInt($("#slot3").val()) +
+                                                    parseInt($("#slot4").val()) +
+                                                    parseInt($("#slot5").val()));
+                                        $("#result").html(num + " is the max number.");
+                                    }
+                                    function GetProduct() {
+                                        var num = ( parseInt($("#slot1").val()) *
+                                                    parseInt($("#slot2").val()) *
+                                                    parseInt($("#slot3").val()) *
+                                                    parseInt($("#slot4").val()) *
+                                                    parseInt($("#slot5").val()));
+                                        $("#result").html(num + " is the max number.");
+                                    }
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="GetMax()" style="float: left;">Get Max</button>
+                    <button type="button" class="btn btn-primary" onclick="GetMin()" style="float: left;">Get Min</button>
+                    <button type="button" class="btn btn-primary" onclick="GetMean()" style="float: left;">Get Mean</button>
+                    <button type="button" class="btn btn-primary" onclick="GetSum()" style="float: left;">Get Sum</button>
+                    <button type="button" class="btn btn-primary" onclick="GetProduct()" style="float: left;">Get Product</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  
+    <div class="row">
+        <h2>Write a program that accepts a series of at least 5 numbers from the user and performs the following actions:</h2>
+        <div style="margin-left:5em">
+            <p />
+            a. Determine which number is the least <p />
+            b. Determine which number is the greatest<p />
+            c. Determine the mean of the numbers<p />
+            d. Determine the sum of all the numbers<p />
+            e. Determine the product of all the numbers <p />
+        </div>
+            Input 5 Numbers:
+    </div>
+
+    <div class="row input-group input-group-sm">
+        <input type="text" id="slot1" class="col-sm-1 well well-sm" value="1">
+        <input type="text" id="slot2" class="col-sm-1 well well-sm" value="2">
+        <input type="text" id="slot3" class="col-sm-1 well well-sm" value="3">
+        <input type="text" id="slot4" class="col-sm-1 well well-sm" value="4">
+        <input type="text" id="slot5" class="col-sm-1 well well-sm" value="5">
+    </div>
+    </br>
+
+    <div class="row">
+        <button onclick="GetMax()">a. Get Max</button>
+        <button onclick="GetMin()">b. Get Min</button>
+        <button onclick="GetMean()">c. Get Mean</button>
+        <button onclick="GetSum()">d. Get Sum</button>
+        <button onclick="GetProduct()">e. Get Product</button>
+    </div>
+    <br />
+    </p>
+    <div class="row">
+        <p id="result"></p> <!--prints out results-->
+    </div>
+    </div><!--container div end tag-->
+    
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script src="scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+    
+    <script type="text/javascript">
+        SyntaxHighlighter.all()
+    </script>
+
+    <script>
+        function GetMax() {
+            var num = Math.max( parseInt($("#slot1").val()),
+                                parseInt($("#slot2").val()),
+                                parseInt($("#slot3").val()),
+                                parseInt($("#slot4").val()),
+                                parseInt($("#slot5").val()));
+            $("#result").html(num + " is the max number.");
+        }
+        function GetMin() {
+            var num = Math.min( parseInt($("#slot1").val()),
+                                parseInt($("#slot2").val()),
+                                parseInt($("#slot3").val()),
+                                parseInt($("#slot4").val()),
+                                parseInt($("#slot5").val()));
+
+            $("#result").html(num + " is the max number.");
+        }
+        function GetMean() {
+            var num = ( parseInt($("#slot1").val())+
+                        parseInt($("#slot2").val())+
+                        parseInt($("#slot3").val())+
+                        parseInt($("#slot4").val())+
+                        parseInt($("#slot5").val()))/5;
+
+            $("#result").html(num + " is the max number.");
+        }
+        function GetSum() {
+            var num = ( parseInt($("#slot1").val()) +
+                        parseInt($("#slot2").val()) +
+                        parseInt($("#slot3").val()) +
+                        parseInt($("#slot4").val()) +
+                        parseInt($("#slot5").val()));
+
+            $("#result").html(num + " is the max number.");
+        }
+        function GetProduct() {
+            var num = ( parseInt($("#slot1").val()) *
+                        parseInt($("#slot2").val()) *
+                        parseInt($("#slot3").val()) *
+                        parseInt($("#slot4").val()) *
+                        parseInt($("#slot5").val()));
+
+            $("#result").html(num + " is the max number.");
+        }
+
+        $('.modal ').on('show.bs.modal', function () {
+            $('.modal .modal-body').css('overflow-y', 'auto');
+            $('.modal .modal-body').css('max-height', $(window).height() * 0.65);
+            $('#modalscroll').css('overflow-y', 'auto');
+            $('#modalscroll').css('max-height', $(window).height() * 0.5);
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6816E00-DB3A-45D5-8CF0-283E1A38B22F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>javaScript_jQuery_Exercise</RootNamespace>
+    <AssemblyName>javaScript_jQuery_Exercise</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.1.2.3\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.1.2.3\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.1.2.3\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.1.2.3\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=1.2.3.246, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.1.2.3\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=1.2.3.490, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.1.2.3\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\SyntaxHighlighter\shCore.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreDjango.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreEclipse.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreEmacs.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreFadeToGrey.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreMDUltra.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreMidnight.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreRDark.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeDefault.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeDjango.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeEclipse.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeEmacs.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeFadeToGrey.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeMDUltra.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeMidnight.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
+    <Content Include="index.html" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scripts\jquery-1.9.1.min.map" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\bordered-pulled.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\core.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\fixed-width.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\font-awesome.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\icons.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\larger.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\list.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\mixins.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\path.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\rotated-flipped.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\spinning.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\stacked.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\less\variables.less" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\font-awesome.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_core.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_icons.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_larger.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_list.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_mixins.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_path.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_spinning.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_stacked.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\scss\_variables.scss" />
+    <Content Include="startbootstrap-agency-1.0.6\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="startbootstrap-agency-1.0.6\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="startbootstrap-agency-1.0.6\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="startbootstrap-agency-1.0.6\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\1.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\2.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\3.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\4.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\cf.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\Logo2016.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\sff.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\about\uncc.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\header-bg.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\nice2b.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\nice2c.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\aetuts.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\creative-market.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\designmodo.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\envato.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\microlancer.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\themeforest.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\logos\wordpress.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\map-image.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\nice2.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\dreams-preview.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\dreams.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\escape-preview.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\escape.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\golden-preview.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\golden.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\roundicons-free.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\roundicons.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\startup-framework-preview.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\startup-framework.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\treehouse-preview.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\portfolio\treehouse.png" />
+    <Content Include="startbootstrap-agency-1.0.6\img\team\1.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\team\2.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\team\3.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\img\team\zeng1.jpg" />
+    <Content Include="startbootstrap-agency-1.0.6\less\agency.less" />
+    <Content Include="startbootstrap-agency-1.0.6\less\mixins.less" />
+    <Content Include="startbootstrap-agency-1.0.6\less\variables.less" />
+    <Content Include="startbootstrap-agency-1.0.6\LICENSE" />
+    <Content Include="startbootstrap-agency-1.0.6\mail\contact_me.php" />
+    <Content Include="startbootstrap-agency-1.0.6\README.md" />
+    <None Include="Properties\PublishProfiles\zengxiong.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Zeng Xiong - Resume 2016.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="HtmlPage2.html" />
+    <Content Include="HtmlPage3.html" />
+    <Content Include="HtmlPage4.html" />
+    <Content Include="scripts\ai.0.15.0-build58334.js" />
+    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-1.9.1.js" />
+    <Content Include="scripts\jquery-1.9.1.min.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shAutoloader.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushAS3.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushBash.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushCpp.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushCSharp.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushCss.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushDelphi.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushDiff.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushErlang.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushGroovy.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushJava.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushJScript.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushPerl.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushPhp.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushPlain.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushPython.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushRuby.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushSass.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushScala.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushSql.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushVb.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shBrushXml.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shCore.js" />
+    <Content Include="scripts\SyntaxHighlighter\scripts\shLegacy.js" />
+    <Content Include="scripts\SyntaxHighlighter\shAutoloader.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushAppleScript.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushAS3.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushBash.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushColdFusion.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushCpp.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushCSharp.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushCss.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushDelphi.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushDiff.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushErlang.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushGroovy.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushJava.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushJavaFX.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushJScript.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPerl.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPhp.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPlain.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPowerShell.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPython.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushRuby.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushSass.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushScala.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushSql.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushVb.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushXml.js" />
+    <Content Include="scripts\SyntaxHighlighter\shCore.js" />
+    <Content Include="scripts\SyntaxHighlighter\shLegacy.js" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCore.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreDefault.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreDjango.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreEclipse.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreEmacs.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreMDUltra.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreMidnight.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shCoreRDark.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeDefault.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeDjango.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeEclipse.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeEmacs.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeMDUltra.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeMidnight.css" />
+    <Content Include="scripts\SyntaxHighlighter\styles\shThemeRDark.css" />
+    <Content Include="startbootstrap-agency-1.0.6\css\agency.css" />
+    <Content Include="startbootstrap-agency-1.0.6\css\bootstrap.css" />
+    <Content Include="startbootstrap-agency-1.0.6\css\bootstrap.min.css" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\css\font-awesome.css" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\css\font-awesome.min.css" />
+    <Content Include="startbootstrap-agency-1.0.6\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="startbootstrap-agency-1.0.6\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="startbootstrap-agency-1.0.6\index.html" />
+    <Content Include="startbootstrap-agency-1.0.6\js\agency.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\bootstrap.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\bootstrap.min.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\cbpAnimatedHeader.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\cbpAnimatedHeader.min.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\classie.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\contact_me.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\jqBootstrapValidation.js" />
+    <Content Include="startbootstrap-agency-1.0.6\js\jquery.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63910</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63910/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
